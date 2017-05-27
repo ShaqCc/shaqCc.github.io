@@ -176,11 +176,6 @@
           2017-05-27
       </time>
     
-    
-    | 
-    <a href='/tags/随手记/'>随手记</a>
-    
-    
 </span>
                 <h1>Hello Hexo 使用Hexo创建你的个人网站</h1>
             </div>
@@ -191,19 +186,19 @@
 <li>环境准备</li>
 </ul>
 <p>1.安装Node.js，安装Hexo需要使用npm命令，下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a>   根据自己的系统自行下载安装<br>2.Git客户端，下载地址：<a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a><br>3.准备好GitHub账号，并且创建一个仓库，仓库名称格式为：username.github.io（很重要，下面要用）,username是你github的用户名<br>4.以上3步准备好之后，开始安装Hexo，进入命令行工具，执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
 <p>5.初始化blog项目</p>
-<p>创建一个文件夹，比如在D盘目录下，创建Blog文件夹，进入Blog文件夹，执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
-<p>6.至此，安装工作完成，接下来生成静态资源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
+<p>创建一个文件夹，比如在D盘目录下，创建Blog文件夹，进入Blog文件夹，执行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<p>6.至此，安装工作完成，接下来生成静态资源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure></p>
 <p>7.启动本地服务，预览刚才创建的网站，命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
 <p>根据提示，在浏览器访问<a href="http://localhost:4000可以看到预览页面" target="_blank" rel="external">http://localhost:4000可以看到预览页面</a></p>
 <p>8.将网站发布到Github服务器，这样别人就能访问到自己的站点了，编辑Blog文件夹下面的<code>_config.yml</code>文件，可以使用NotePadd++编辑器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repository: https://github.com/ShaqCc/shaqCc.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/ShaqCc/shaqCc.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>至文件最下面，将第三步创建的github仓库地址放到repository: 后面，注意冒号：后面有空格！</p>
 <p>保存~</p>
 <p>9.执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <p>执行成功，便可在浏览器访问<a href="https://username.github.io/进行访问了，username换成你的github用户名" target="_blank" rel="external">https://username.github.io/进行访问了，username换成你的github用户名</a></p>
 <p>OK，个人网站搭建成功，Hexo相关的使用方法可以访问<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/writing.html</a></p>
 
