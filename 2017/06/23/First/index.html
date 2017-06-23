@@ -182,6 +182,23 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<p>一个月没用，都忘了咋用的了，学习不是一时的，当时学会了，第二天不看，很快就会忘得，<br>        谨记谨记</p>
+<p>###记录一下发布blog的步骤</p>
+<ul>
+<li>进入本地blog根目录，打开cmd，运行命令：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new 布局属性 文件名称</div></pre></td></tr></table></figure>
+<p>执行成功，会在source目录下生成 .md 文件</p>
+<ul>
+<li>编辑.md文件</li>
+<li>生成静态资源</li>
+</ul>
+<p>运行命令：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo gegerate</div></pre></td></tr></table></figure></p>
+<ul>
+<li>部署到服务器</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo generate --deploy</div><div class="line">或者</div><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
+<p>可以简写为<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
+<p>就是这样</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
