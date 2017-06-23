@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>post | conci</title>
+    <meta name="description" content="终于有了自己的第一个个人网站，灰常激动，感谢Hexo,写此文章记录一下自己一步一步搭建的过程 环境准备1.安装Node.js安装Hexo需要使用npm命令，下载地址：https://nodejs.org/en/   根据自己的系统自行下载安装 2.Git客户端下载地址：https://git-scm.com/downloads 3.准备GitHub账号如果已有就不用注册了，创建一个仓库，仓库名称格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello Hexo 使用Hexo创建你的个人网站">
+<meta property="og:url" content="http://yoursite.com/2017/05/27/Hello-Hexo/index.html">
+<meta property="og:site_name" content="巴银的技术博客">
+<meta property="og:description" content="终于有了自己的第一个个人网站，灰常激动，感谢Hexo,写此文章记录一下自己一步一步搭建的过程 环境准备1.安装Node.js安装Hexo需要使用npm命令，下载地址：https://nodejs.org/en/   根据自己的系统自行下载安装 2.Git客户端下载地址：https://git-scm.com/downloads 3.准备GitHub账号如果已有就不用注册了，创建一个仓库，仓库名称格">
+<meta property="og:updated_time" content="2017-05-27T09:59:28.482Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello Hexo 使用Hexo创建你的个人网站">
+<meta name="twitter:description" content="终于有了自己的第一个个人网站，灰常激动，感谢Hexo,写此文章记录一下自己一步一步搭建的过程 环境准备1.安装Node.js安装Hexo需要使用npm命令，下载地址：https://nodejs.org/en/   根据自己的系统自行下载安装 2.Git客户端下载地址：https://git-scm.com/downloads 3.准备GitHub账号如果已有就不用注册了，创建一个仓库，仓库名称格">
+    
+    
+        <link rel="icon" href="./favicon.ico">
+    
+    <link rel="stylesheet" href="/css/concise.css">
+    <script src="/js/concise.js"></script>
+    <script>
+        (function(){
+            var useragent=navigator.userAgent;
+            console.log(navigator,useragent);
+            var isM;
+            if(useragent.indexOf('iPhone')!=-1){
+                isM=true;
+            }else if(useragent.indexOf('Android ')!=-1){
+                isM=true;
+            }else if(useragent.indexOf('iPad')!=-1){
+                isM=true;
+            }else{
+                isM=false;
+            }
+            if(isM){
+                document.documentElement.style.fontSize=document.documentElement.clientWidth/375*100+'px';
+                window.onresize=function(){
+                    document.documentElement.style.fontSize=document.documentElement.clientWidth/375*100+'px';
+                };
+            }
+        })();
+    </script>
+    
+    <script src="http://opu30aljn.bkt.clouddn.com/jquery.js"></script>
+    
+    <script src="/js/script.js"></script>
+</head>
+<body>
+<input type="checkbox" id="left-information">
+<div id="wrapper">
+    <div id="bgg"></div>
+    <header id="header">
+    <nav id="nav" class="clearfix">
+        <label for="left-information"></label>
+        <ul class='nav-left'>
+            <li><a href="/">conci</a></li>
+        </ul>
+        <input type="checkbox" id="header-right-nav">
+        <ul class="clearfix nav-right">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+            <li><a href="/tags">tags</a></li>
+            
+        </ul>
+        <label for="header-right-nav"><i></i></label>
+    </nav>
+</header>
+    <article id="logo">
+    <div id="logo-content">
+        <header>
+            <a href="">conci.theme<b>hexo</b></a>
+        </header>
+        <p>
+            conci version 1.0.0<br>
+            Simple and practical hexo personal blog theme.<br>
+            The freedom to choose
+        </p>
+    </div>
+</article>
+    <div id="main" class="clearfix">
+        <section id="main-left" class="left">
+            <article id="post">
+    <h1>Hello Hexo 使用Hexo创建你的个人网站</h1>
+    <p>
+        
+        
+        <span class="date">2017.05.27</span>
+    </p>
+    <div id="page-post-content">
+        <p>终于有了自己的第一个个人网站，灰常激动，感谢<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo</a>,写此文章记录一下自己一步一步搭建的过程</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><h4 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h4><p>安装Hexo需要使用npm命令，下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a>   根据自己的系统自行下载安装</p>
+<h4 id="2-Git客户端"><a href="#2-Git客户端" class="headerlink" title="2.Git客户端"></a>2.Git客户端</h4><p>下载地址：<a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
+<h4 id="3-准备GitHub账号"><a href="#3-准备GitHub账号" class="headerlink" title="3.准备GitHub账号"></a>3.准备GitHub账号</h4><p>如果已有就不用注册了，创建一个仓库，仓库名称格式为：username.github.io（很重要，下面要用）,username是你github的用户名</p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><h4 id="4-安装Hexo"><a href="#4-安装Hexo" class="headerlink" title="4.安装Hexo"></a>4.安装Hexo</h4><p>确保以上3步成功执行，进入命令行工具，执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+<h4 id="5-初始化blog项目"><a href="#5-初始化blog项目" class="headerlink" title="5.初始化blog项目"></a>5.初始化blog项目</h4><p>创建一个文件夹，比如在D盘目录下，创建Blog文件夹，进入Blog文件夹，执行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<h4 id="6-生成静态资源"><a href="#6-生成静态资源" class="headerlink" title="6.生成静态资源"></a>6.生成静态资源</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
+<h4 id="7-启动本地服务"><a href="#7-启动本地服务" class="headerlink" title="7.启动本地服务"></a>7.启动本地服务</h4><p>预览刚才创建的网站，命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>根据提示，在浏览器访问<a href="http://localhost:4000可以看到预览页面" target="_blank" rel="external">http://localhost:4000可以看到预览页面</a></p>
+<h4 id="8-发布到GitHub"><a href="#8-发布到GitHub" class="headerlink" title="8.发布到GitHub"></a>8.发布到GitHub</h4><p>将网站发布到Github服务器，这样别人就能访问到自己的站点了，编辑Blog文件夹下面的<code>_config.yml</code>文件，可以使用NotePadd++编辑器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/ShaqCc/shaqCc.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>至文件最下面，将第三步创建的github仓库地址放到repository: 后面，注意冒号：后面有空格！</p>
+<p>保存~</p>
+<h4 id="9-发布网站："><a href="#9-发布网站：" class="headerlink" title="9.发布网站："></a>9.发布网站：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>执行成功，便可在浏览器访问<a href="https://username.github.io/进行访问了，username换成你的github用户名" target="_blank" rel="external">https://username.github.io/进行访问了，username换成你的github用户名</a></p>
+<p>OK，个人网站搭建成功，Hexo相关的使用方法可以访问<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/writing.html</a></p>
+<h4 id="如果有疑问可联系-QQ-294958260"><a href="#如果有疑问可联系-QQ-294958260" class="headerlink" title="如果有疑问可联系 QQ:294958260"></a>如果有疑问可联系 QQ:294958260</h4>
+    </div>
+    
+    
+    
+<nav id="article-nav" class="clearfix">
+  
+    <a href="/2017/06/23/First/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          
+          June First
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+        
+        
+      <div class="article-nav-title">undefined</div>
+    </a>
+  
+</nav>
+
+</article>
+
+
+        </section>
+        <section id="main-right" class="right">
+            <div class="my">
+    <div class="my-information">
+        <div class="my-img">
+            <img src="http://ooa3lxrpg.bkt.clouddn.com/b.jpg?imageView2/1/w/120/h/120/q/75" rel="图片">
+            <a href="/"></a>
+        </div>
+        <span>cc</span>
+        <p>求知若饥 虚心若愚</p>
+    </div>
+    <p class="my-social">
+        
+            <a href="/" class="my-social-me4">github</a>
+        
+            <a href="/" class="my-social-me3">twitter</a>
+        
+            <a href="/" class="my-social-me5">weibo</a>
+        
+            <a href="/" class="my-social-me3">豆瓣</a>
+        
+            <a href="/" class="my-social-me1">知乎</a>
+        
+    </p>
+    <div class="my-post">
+        <a href="/archives">
+            <strong>4</strong><br>
+            <span>posts</span>
+        </a>
+        <a href="/categories">
+            <strong>0</strong><br>
+            <span>categories</span>
+        </a>
+        <a href="/tags">
+            <strong>0</strong><br>
+            <span>tags</span>
+        </a>
+    </div>
+    <div class="search-rss">
+        <div class="my-search">
+            <a href="javascript:void(0)" id ='my-search-a' class="popup-trigger">search</a>
+        </div>
+        
+    </div>
+    <div class="my-links">
+        <ul class="clearfix">
+            
+            <li>
+                <a href="/">
+                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg.jpg">
+                    <p>ccblog</p>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/">
+                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%282%29.jpg">
+                    <p>boc</p>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/">
+                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%283%29.jpg">
+                    <p>haha</p>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/">
+                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%283%29.jpg">
+                    <p>pp</p>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/">
+                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%281%29.jpg">
+                    <p>oop</p>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="hot-page">
+        
+    </div>
+</div>
+        </section>
+    </div>
+    <footer id="footer">
+    <p>© 2017  cc | 
+        </iframe><br/>
+        concise theme, this world is mine.  | cc'blog | Fork me on Github
+        
+    </p>
+</footer>
+</div>
+<label for="left-information"></label>
+
+
+
+
+</body>
+</html>
