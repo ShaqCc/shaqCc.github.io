@@ -1,248 +1,45 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-    <title>post | conci</title>
-    <meta name="description" content="一个月没用，都忘了咋用的了，学习不是一时的，当时学会了，第二天不看，很快就会忘得，        谨记谨记 ###记录一下发布blog的步骤  进入本地blog根目录，打开cmd，运行命令：  1hexo new 布局属性 文件名称 执行成功，会在source目录下生成 .md 文件  编辑.md文件 生成静态资源  运行命令：1hexo gegerate  部署到服务器  123hexo gen">
-<meta property="og:type" content="article">
-<meta property="og:title" content="June First">
-<meta property="og:url" content="http://yoursite.com/2017/06/23/First/index.html">
-<meta property="og:site_name" content="巴银的技术博客">
-<meta property="og:description" content="一个月没用，都忘了咋用的了，学习不是一时的，当时学会了，第二天不看，很快就会忘得，        谨记谨记 ###记录一下发布blog的步骤  进入本地blog根目录，打开cmd，运行命令：  1hexo new 布局属性 文件名称 执行成功，会在source目录下生成 .md 文件  编辑.md文件 生成静态资源  运行命令：1hexo gegerate  部署到服务器  123hexo gen">
-<meta property="og:updated_time" content="2017-06-23T02:37:12.107Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="June First">
-<meta name="twitter:description" content="一个月没用，都忘了咋用的了，学习不是一时的，当时学会了，第二天不看，很快就会忘得，        谨记谨记 ###记录一下发布blog的步骤  进入本地blog根目录，打开cmd，运行命令：  1hexo new 布局属性 文件名称 执行成功，会在source目录下生成 .md 文件  编辑.md文件 生成静态资源  运行命令：1hexo gegerate  部署到服务器  123hexo gen">
-    
-    
-        <link rel="icon" href="./favicon.ico">
-    
-    <link rel="stylesheet" href="/css/concise.css">
-    <script src="/js/concise.js"></script>
-    <script>
-        (function(){
-            var useragent=navigator.userAgent;
-            console.log(navigator,useragent);
-            var isM;
-            if(useragent.indexOf('iPhone')!=-1){
-                isM=true;
-            }else if(useragent.indexOf('Android ')!=-1){
-                isM=true;
-            }else if(useragent.indexOf('iPad')!=-1){
-                isM=true;
-            }else{
-                isM=false;
-            }
-            if(isM){
-                document.documentElement.style.fontSize=document.documentElement.clientWidth/375*100+'px';
-                window.onresize=function(){
-                    document.documentElement.style.fontSize=document.documentElement.clientWidth/375*100+'px';
-                };
-            }
+extends ./_partial/layout.pug
+block content
+  include ./_partial/post_header.pug
+  .article-content(style='max-width:'+ theme.content_width +'px')
+    if page.photos && page.photos.length
+      div
+        each photo in page.photos
+          a.article-gallery-img.fancybox(href=photo)
+            img(src=photo)
+    | !{page.content}
+  .article-meta(style='max-width:'+ theme.content_width +'px')
+    if page.tags && page.tags.length
+      .tags
+        i.icon.icon-tag
+        | !{list_tags(page.tags)}
+    if page.tags && page.categories.length
+      .categories
+        i.icon.icon-category
+        | !{list_categories(page.categories)}
+  if theme.duoshuo.enable
+    .article-comment(style='max-width:'+ theme.content_width +'px')
+      #ds-thread.ds-thread(data-thread-key=page._id, data-title=page.title, data-url=config.url + url_for(page.path), site-name=theme.duoshuo.siteName)
+      script.
+        var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+        var duoshuoQuery = {short_name: siteName};
+        (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0] 
+          || document.getElementsByTagName('body')[0]).appendChild(ds);
         })();
-    </script>
-    
-    <script src="http://opu30aljn.bkt.clouddn.com/jquery.js"></script>
-    
-    <script src="/js/script.js"></script>
-</head>
-<body>
-<input type="checkbox" id="left-information">
-<div id="wrapper">
-    <div id="bgg"></div>
-    <header id="header">
-    <nav id="nav" class="clearfix">
-        <label for="left-information"></label>
-        <ul class='nav-left'>
-            <li><a href="/">conci</a></li>
-        </ul>
-        <input type="checkbox" id="header-right-nav">
-        <ul class="clearfix nav-right">
-            
-            <li><a href="/">Home</a></li>
-            
-            <li><a href="/archives">Archives</a></li>
-            
-            <li><a href="/tags">tags</a></li>
-            
-        </ul>
-        <label for="header-right-nav"><i></i></label>
-    </nav>
-</header>
-    <article id="logo">
-    <div id="logo-content">
-        <header>
-            <a href="">conci.theme<b>hexo</b></a>
-        </header>
-        <p>
-            conci version 1.0.0<br>
-            Simple and practical hexo personal blog theme.<br>
-            The freedom to choose
-        </p>
-    </div>
-</article>
-    <div id="main" class="clearfix">
-        <section id="main-left" class="left">
-            <article id="post">
-    <h1>June First</h1>
-    <p>
-        
-        
-        <span class="date">2017.06.23</span>
-    </p>
-    <div id="page-post-content">
-        <p>一个月没用，都忘了咋用的了，学习不是一时的，当时学会了，第二天不看，很快就会忘得，<br>        谨记谨记</p>
-<p>###记录一下发布blog的步骤</p>
-<ul>
-<li>进入本地blog根目录，打开cmd，运行命令：</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new 布局属性 文件名称</div></pre></td></tr></table></figure>
-<p>执行成功，会在source目录下生成 .md 文件</p>
-<ul>
-<li>编辑.md文件</li>
-<li>生成静态资源</li>
-</ul>
-<p>运行命令：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo gegerate</div></pre></td></tr></table></figure></p>
-<ul>
-<li>部署到服务器</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo generate --deploy</div><div class="line">或者</div><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
-<p>可以简写为<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
-<p>就是这样</p>
-
-    </div>
-    
-    
-    
-<nav id="article-nav" class="clearfix">
-  
-    <a href="/2017/06/23/configTheme/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          
-          configTheme
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/05/27/Hello-Hexo/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-        
-        
-      <div class="article-nav-title">undefined</div>
-    </a>
-  
-</nav>
-
-</article>
-
-
-        </section>
-        <section id="main-right" class="right">
-            <div class="my">
-    <div class="my-information">
-        <div class="my-img">
-            <img src="http://ooa3lxrpg.bkt.clouddn.com/b.jpg?imageView2/1/w/120/h/120/q/75" rel="图片">
-            <a href="/"></a>
-        </div>
-        <span>cc</span>
-        <p>求知若饥 虚心若愚</p>
-    </div>
-    <p class="my-social">
-        
-            <a href="/" class="my-social-me4">github</a>
-        
-            <a href="/" class="my-social-me2">twitter</a>
-        
-            <a href="/" class="my-social-me4">weibo</a>
-        
-            <a href="/" class="my-social-me5">豆瓣</a>
-        
-            <a href="/" class="my-social-me2">知乎</a>
-        
-    </p>
-    <div class="my-post">
-        <a href="/archives">
-            <strong>4</strong><br>
-            <span>posts</span>
-        </a>
-        <a href="/categories">
-            <strong>0</strong><br>
-            <span>categories</span>
-        </a>
-        <a href="/tags">
-            <strong>0</strong><br>
-            <span>tags</span>
-        </a>
-    </div>
-    <div class="search-rss">
-        <div class="my-search">
-            <a href="javascript:void(0)" id ='my-search-a' class="popup-trigger">search</a>
-        </div>
-        
-    </div>
-    <div class="my-links">
-        <ul class="clearfix">
-            
-            <li>
-                <a href="/">
-                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg.jpg">
-                    <p>ccblog</p>
-                </a>
-            </li>
-            
-            <li>
-                <a href="/">
-                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%282%29.jpg">
-                    <p>boc</p>
-                </a>
-            </li>
-            
-            <li>
-                <a href="/">
-                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%283%29.jpg">
-                    <p>haha</p>
-                </a>
-            </li>
-            
-            <li>
-                <a href="/">
-                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%283%29.jpg">
-                    <p>pp</p>
-                </a>
-            </li>
-            
-            <li>
-                <a href="/">
-                    <img src="http://ooa3lxrpg.bkt.clouddn.com/timg%20%281%29.jpg">
-                    <p>oop</p>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-    <div class="hot-page">
-        
-    </div>
-</div>
-        </section>
-    </div>
-    <footer id="footer">
-    <p>© 2017  cc | 
-        </iframe><br/>
-        concise theme, this world is mine.  | cc'blog | Fork me on Github
-        
-    </p>
-</footer>
-</div>
-<label for="left-information"></label>
-
-
-
-
-</body>
-</html>
+  ul.navication
+    li.home
+      a(href="/")
+        i.icon.icon-home
+    if page.prev && page.prev.path
+      li
+        a(href=url_for(page.prev.path))
+          i.icon.icon-arror-left
+    if page.next && page.next.path
+      li
+        a(href=url_for(page.next.path))
+          i.icon.icon-arror-right
